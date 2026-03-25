@@ -137,7 +137,7 @@ int handle_input(tui_state *state, sftp_client *client, sftp_config *cfg,
             break;
         case KEY_DOWN: // 아래 방향키
             if (state->current_panel == LOCAL_PANEL && state->local_sel < *local_count - 1) state->local_sel++;
-            else if (state->current_panel == REMOTE_PANEL && state->remote_sel < *remote_count - 1) state->remote_sel++;
+            else if (state->current_panel == REMOTE_PANEL && state->remote_sel < *remote_count - 1) state->remote_sel--;
             break;
         case '\n': // ENTER: 디렉토리 이동
             if (state->current_panel == LOCAL_PANEL && *local_count > 0) {

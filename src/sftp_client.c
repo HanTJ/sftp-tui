@@ -4,7 +4,12 @@
 #include <sys/stat.h>   // 파일 정보(크기, 타입 등) 관련 헤더
 #include <fcntl.h>      // 파일 제어 관련 헤더
 #include <dirent.h>     // 디렉토리 탐색 관련 헤더
-#include "../include/sftp_client.h"
+#include "sftp_client.h"
+#include <arpa/inet.h>
+#include <netinet/in.h>
+#include <sys/socket.h>
+#include <unistd.h>
+#include <pthread.h>
 
 /* 
  * sftp_init_client: 서버에 접속하고 SFTP 세션을 준비합니다. 
